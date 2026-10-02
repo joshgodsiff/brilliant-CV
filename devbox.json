@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.18.4/.schema/devbox.schema.json",
+  "packages": [
+    "github:sadjow/claude-code-nix",
+    "typst@0.15.1",
+    "just@latest",
+    "utpm@0.3.0",
+    "python@3.12",
+    "source-sans@3.052",
+    "roboto@latest",
+    "font-awesome@7.2.0",
+    "typstyle@0.15.0"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "build": [
+        "just build"
+      ],
+      "watch": [
+        "just watch"
+      ],
+      "fmt-check": [
+        "typstyle --check src template tests"
+      ]
+    }
+  },
+  "env": {
+    "TYPST_FONT_PATHS": "$PWD/.devbox/nix/profile/default/share/fonts"
+  }
+}
