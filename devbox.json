@@ -9,7 +9,8 @@
     "source-sans@3.052",
     "roboto@latest",
     "font-awesome@7.2.0",
-    "typstyle@0.15.0"
+    "typstyle@0.15.0",
+    "poppler-utils@latest"
   ],
   "shell": {
     "init_hook": [

@@ -122,6 +122,56 @@
         }
       }
     },
+    "poppler-utils@latest": {
+      "last_modified": "2026-09-29T03:29:29Z",
+      "resolved": "github:NixOS/nixpkgs/b6c8664de9b6cc07fe5666a29f91884ba81197c4#poppler-utils",
+      "source": "devbox-search",
+      "version": "26.09.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5mwz7xmrc7928bcfl6jif5z29fabyq9b-poppler-utils-26.09.0",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/f9b4jv7mpmjvkd3jsk2fm3k1pc6hv1l8-poppler-utils-26.09.0-dev"
+            }
+          ],
+          "store_path": "/nix/store/5mwz7xmrc7928bcfl6jif5z29fabyq9b-poppler-utils-26.09.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4ij5m4j7jzax2w91yhwr09j1y0prla6f-poppler-utils-26.09.0",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/g2450qgh7k929f9a8yl125kdn5iz6jbm-poppler-utils-26.09.0-dev"
+            }
+          ],
+          "store_path": "/nix/store/4ij5m4j7jzax2w91yhwr09j1y0prla6f-poppler-utils-26.09.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/54diyf6hv77hggdpd0wqw3yi9c4ac8yr-poppler-utils-26.09.0",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/58rjci56q87cmsq3pszncadh27hf8nml-poppler-utils-26.09.0-dev"
+            }
+          ],
+          "store_path": "/nix/store/54diyf6hv77hggdpd0wqw3yi9c4ac8yr-poppler-utils-26.09.0"
+        }
+      }
+    },
     "python@3.12": {
       "last_modified": "2026-09-29T03:29:29Z",
       "plugin_version": "0.0.5",

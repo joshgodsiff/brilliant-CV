@@ -44,10 +44,14 @@
 
 // Add, remove, or reorder modules to customize your CV content
 #import-modules((
-  "education",
-  "professional",
-  "projects",
-  "certificates",
-  "publications",
+  "about",
   "skills",
+  "professional",
+  "education",
+  "community",
+  "presentations",
+  // Template modules, not used yet:
+  // "projects",
+  // "certificates",
+  // "publications",
 ))
