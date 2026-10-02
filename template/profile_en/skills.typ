@@ -6,44 +6,51 @@
 
 #cv-section("Skills")
 
+// Widen the skill-type column (package default: 17%) so the longest type,
+// "Document / Data Formats", stays on one line. Re-check after renaming types.
+#let cv-skill = cv-skill.with(type-width: 22%)
+
+// Separator between skills: a light pip, quieter than the package's h-bar().
+#let pip() = [#h(3pt) #text(fill: rgb("#CCCCCC"))[•] #h(4pt)]
+
 #cv-skill(
   type: [Programming],
-  info: [Haskell #h-bar() Scala #h-bar() JavaScript #h-bar() Python #h-bar() SQL],
+  info: [Haskell #pip() Scala #pip() JavaScript #pip() Python #pip() SQL],
 )
 
 #cv-skill(
   type: [Document / Data Formats],
-  info: [HTML & CSS #h-bar() XML #h-bar() Avro #h-bar() JSON #h-bar() Delta],
+  info: [HTML & CSS #pip() XML #pip() Avro #pip() JSON #pip() Delta],
 )
 
 #cv-skill(
   type: [Databases],
-  info: [MySQL #h-bar() PostgreSQL #h-bar() Kafka #h-bar() ElasticSearch #h-bar() DynamoDB],
+  info: [MySQL #pip() PostgreSQL #pip() Kafka #pip() ElasticSearch #pip() DynamoDB],
 )
 
 #cv-skill(
   type: [Libraries & Frameworks],
-  info: [React #h-bar() Spark #h-bar() Node],
+  info: [React #pip() Spark #pip() Node],
 )
 
 #cv-skill(
   type: [Cloud Platforms],
-  info: [AWS #h-bar() GCP #h-bar() DataBricks],
+  info: [AWS #pip() GCP #pip() DataBricks],
 )
 
 #cv-skill(
   type: [Operating Systems],
-  info: [Windows #h-bar() Ubuntu Linux #h-bar() MacOS],
+  info: [Windows #pip() Ubuntu Linux #pip() MacOS],
 )
 
 #cv-skill(
   type: [Tools & Software],
-  info: [VSCode #h-bar() JetBrains IDEs #h-bar() Git #h-bar() Terraform #h-bar() Docker #h-bar() Nix],
+  info: [VSCode #pip() JetBrains IDEs #pip() Git #pip() Terraform #pip() Docker #pip() Nix],
 )
 
 #cv-skill(
   type: [Soft Skills],
-  info: [Agile #h-bar() Product Management #h-bar() Mentoring #h-bar() Kanban #h-bar() Scrum],
+  info: [Agile #pip() Product Management #pip() Mentoring #pip() Kanban #pip() Scrum],
 )
 
 

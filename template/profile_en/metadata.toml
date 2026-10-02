@@ -29,7 +29,8 @@ letter_footer = "Cover letter"
     # awesome_color = "skyblue"
 
     # Controls vertical spacing; increase to spread out sections/entries, decrease to compact
-    before_section_skip = "1pt"
+    # 4pt (template: 1pt) adds about 25% to the ~12pt total gap above each section
+    before_section_skip = "4pt"
     # Vertical space before each entry within a section
     before_entry_skip = "1pt"
     # Vertical space before entry description text
@@ -40,7 +41,10 @@ letter_footer = "Cover letter"
 
     # Width of the right-side date column in entries. Tune per locale (zh
     # benefits from ~4.7cm, fr from ~3.4cm, it from ~3.9cm).
-    date_width = "3.6cm"
+    # 4.6cm keeps the longest location, "Canberra & Sydney, Australia", on one line.
+    date_width = "4.6cm"
+    # Template example:
+    # date_width = "3.6cm"
 
     # Overrides base font size for CV body text; affects overall density of content.
     # The cover letter ignores it and uses a 12pt body (see the letter() docs).
@@ -56,7 +60,7 @@ letter_footer = "Cover letter"
 
     [layout.header]
         # Aligns the entire header block (name, info, quote). Possible values: left, center, right
-        header_align = "left"
+        header_align = "center"
 
         # false hides the photo and gives full width to name/info
         display_profile_photo = false
@@ -130,6 +134,9 @@ letter_footer = "Cover letter"
         fill = "#333333"
     [layout.parts.header-info]
         fill = "#333333"
+    # Upright rather than italic; cv.typ adds the small caps with a show rule.
+    [layout.parts.header-quote]
+        style = "normal"
     [layout.parts.entry-primary]
         fill = "#414141"
     [layout.parts.entry-secondary]
@@ -190,6 +197,8 @@ letter_footer = "Cover letter"
     [personal.info]
         # Shown as map-marker icon in header; displayed as plain text (no link)
         location = "11 Mimosa Road, Katoomba, NSW, 2780"
+        # Puts the address on its own line, above the other contact details
+        linebreak = ""
         # Shown as phone icon in header; displayed as-is with a tel: link
         phone = "0408 125 562"
         # Shown as envelope icon in header; auto-links to mailto:<value>

@@ -6,6 +6,17 @@
 
 #cv-section("Experience")
 
+// Short right-aligned rule that fades out towards the left, placed between
+// entries. Port of `\smallrule` from the old Awesome-CV résumé (a 7.98cm x
+// 0.02cm bar in #999999 on a 17cm text width). Used only after entries with
+// a description, and not after the last entry on a page — so re-check the
+// placements below when the pagination changes.
+#let entry-rule() = align(right, box(
+  width: 47%,
+  height: 0.57pt,
+  fill: gradient.linear(rgb("#99999900"), rgb("#999999")),
+))
+
 #cv-entry(
   title: [Senior Software Engineer],
   society: [Seek],
@@ -35,6 +46,8 @@
   ),
 )
 
+#entry-rule()
+
 #cv-entry(
   title: [Staff Software Engineer],
   society: [Voly],
@@ -60,6 +73,8 @@
   ),
 )
 
+#entry-rule()
+
 #cv-entry(
   title: [Senior Software Engineer],
   society: [Prezzee],
@@ -83,6 +98,8 @@
   ),
 )
 
+#entry-rule()
+
 #cv-entry(
   title: [Co-Founder],
   society: [1Self],
@@ -101,6 +118,8 @@
     "Startups",
   ),
 )
+
+#entry-rule()
 
 #cv-entry(
   title: [Software Engineer],
@@ -125,6 +144,8 @@
   ),
 )
 
+#entry-rule()
+
 #cv-entry(
   title: [Software Engineer],
   society: [General Dynamics Mediaware],
@@ -145,6 +166,8 @@
     "Web Development",
   ),
 )
+
+#entry-rule()
 
 #cv-entry(
   title: [Software Engineer],

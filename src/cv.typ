@@ -253,18 +253,24 @@
       )],
   )
 
-  if header-info != none {
-    rows.push([#(styles.info)(header-info)])
-  }
+  // The quote sits directly under the name, above the contact info.
   if header-quote != none {
     rows.push([#(styles.quote)(header-quote)])
   }
+  if header-info != none {
+    rows.push([#(styles.info)(header-info)])
+  }
+
+  // With a quote, keep the name, quote, and contact info close together.
+  let row-gutter = if header-quote != none and header-info != none {
+    (3mm, 2mm)
+  } else { 6mm }
 
   let result = grid(
     columns: 1fr,
     inset: 0pt,
     stroke: none,
-    row-gutter: 6mm,
+    row-gutter: row-gutter,
     ..rows,
   )
 
@@ -439,6 +445,27 @@
     parts,
     smallcaps(str),
   )
+
+  // The generation date follows the footer text. `typst compile
+  // --creation-timestamp` (or SOURCE_DATE_EPOCH) pins it for reproducible builds.
+  // Rendered as "October 2nd, 2026".
+  let today = datetime.today()
+  let day = today.day()
+  let suffix = if calc.rem(day, 100) in (11, 12, 13) { "th" } else {
+    ("th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th").at(calc.rem(
+      day,
+      10,
+    ))
+  }
+  let generated = (
+    today.display("[month repr:long] ")
+      + str(day)
+      + suffix
+      + today.display(", [year]")
+  )
+  let footer-text = if footer-text == "" { generated } else {
+    footer-text + " · " + generated
+  }
 
   if display-page-counter {
     // Name and page counter take their natural widths; the center
@@ -627,16 +654,23 @@
 /// Create entry tag list
 /// -> content
 #let _create-entry-tag-list(tags, tag-style) = {
-  for tag in tags {
-    box(
-      inset: (x: 0.25em),
-      outset: (y: 0.25em),
-      fill: _regular-colors.subtlegray,
-      radius: 3pt,
-      tag-style(tag),
-    )
-    h(5pt)
-  }
+  if tags.len() == 0 { return }
+  // Right-aligned; joined rather than trailed with h(5pt), so the last tag
+  // sits flush with the right margin.
+  align(
+    right,
+    tags
+      .map(tag => box(
+        // About 2px more on each side and 1px more above and below than the
+        // upstream 0.25em, at the 9pt body size.
+        inset: (x: 0.42em),
+        outset: (y: 0.33em),
+        fill: _regular-colors.subtlegray,
+        radius: 3pt,
+        tag-style(tag),
+      ))
+      .join(h(5pt)),
+  )
 }
 
 /// Core entry rendering function

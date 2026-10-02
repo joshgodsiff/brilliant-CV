@@ -141,7 +141,8 @@
       (left: 2cm, right: 1.4cm, top: 1.2cm, bottom: 1.2cm)
     }
   } else {
-    (left: 1.4cm, right: 1.4cm, top: 1cm, bottom: 1cm)
+    // A deeper bottom margin than the top one gives the footer clearance.
+    (left: 1.4cm, right: 1.4cm, top: 1cm, bottom: 1.6cm)
   }
 }
 
@@ -228,6 +229,8 @@
   set page(
     paper: paper-size,
     margin: _page-margin(paper-size),
+    // Lower the footer further into the bottom margin (Typst default: 30%).
+    footer-descent: 50%,
     footer: context _cv._cv-footer(metadata),
   )
 

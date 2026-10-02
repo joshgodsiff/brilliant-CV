@@ -24,6 +24,11 @@
   }
 }
 
+// Render the header tagline (header_quote) in small caps. [layout.parts]
+// has no small-caps property, so this uses the part's label instead. It must
+// come before `#show: cv.with(...)`, which renders the header.
+#show <bcv-header-quote>: smallcaps
+
 #show: cv.with(
   metadata,
   // Profile photos are personal and sensitive — avoid committing real ones to public git repos.

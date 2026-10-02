@@ -5,7 +5,7 @@
 /// [Python #h-bar() SQL #h-bar() Tableau]
 /// ```
 /// -> content
-#let h-bar() = [#h(5pt) | #h(5pt)]
+#let h-bar() = [#h(5pt) #text(fill: rgb("#CCCCCC"))[|] #h(5pt)]
 
 #let _latin-font-list = (
   "Source Sans 3",
