@@ -15,7 +15,7 @@
 
 #cv-skill(
   type: [Programming],
-  info: [Haskell #pip() Scala #pip() JavaScript #pip() Python #pip() SQL],
+  info: [Rust #pip() Haskell #pip() Scala #pip() JavaScript #pip() Python #pip() SQL],
 )
 
 #cv-skill(
@@ -25,12 +25,12 @@
 
 #cv-skill(
   type: [Databases],
-  info: [MySQL #pip() PostgreSQL #pip() Kafka #pip() ElasticSearch #pip() DynamoDB],
+  info: [PostgreSQL #pip() Kafka #pip() ElasticSearch #pip() DynamoDB #pip() S3],
 )
 
 #cv-skill(
   type: [Libraries & Frameworks],
-  info: [React #pip() Spark #pip() Node],
+  info: [React #pip() Spark #pip() NodeJS #pip() Smithy],
 )
 
 #cv-skill(
@@ -40,12 +40,12 @@
 
 #cv-skill(
   type: [Operating Systems],
-  info: [Windows #pip() Ubuntu Linux #pip() MacOS],
+  info: [Linux #pip() MacOS],
 )
 
 #cv-skill(
   type: [Tools & Software],
-  info: [VSCode #pip() JetBrains IDEs #pip() Git #pip() Terraform #pip() Docker #pip() Nix],
+  info: [VSCode #pip() JetBrains IDEs #pip() Git #pip() Terraform #pip() Docker #pip() Nix #pip() Lambda #pip() Claude],
 )
 
 #cv-skill(

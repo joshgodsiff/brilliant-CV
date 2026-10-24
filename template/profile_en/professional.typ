@@ -6,6 +6,13 @@
 
 #cv-section("Experience")
 
+// Render each description item as an indented, justified paragraph instead of
+// a bullet point, as in the old résumé (2ex left margin ≈ 1em; Typst has no ex
+// unit). Applies to this file only. `spacing` replaces the line leading
+// (0.65em) rather than adding to it, so 1.35em gives roughly one extra 0.7em gap.
+#set list(marker: [], indent: 1em, body-indent: 0pt, spacing: 1.35em)
+#set par(justify: true)
+
 // Short right-aligned rule that fades out towards the left, placed between
 // entries. Port of `\smallrule` from the old Awesome-CV résumé (a 7.98cm x
 // 0.02cm bar in #999999 on a 17cm text width). Used only after entries with
@@ -18,16 +25,44 @@
 ))
 
 #cv-entry(
+  title: [Senior Software Engineer, Acting Product Manager],
+  society: [Corro],
+  date: [December 2025 - Present],
+  location: [Remote, Australia],
+  // TODO: placeholder content — replace.
+  description: list(
+    [At Corro I work as a backend engineer, writing Rust to create the first version of the company's product - a single-pane-of-glass communication platform.],
+    [My main task has been building out the messaging software which forms the core of the platform. This has required me to distill a complex set of business goals and requirements into an implementable design, and then lead the technical work to achieve that design.],
+    [Business goals around auditability, low-trust communications and a multi-master federated architecture have necessitated a complex data model and communication protocol, which I have successfully designed and delivered.],
+    [Recently, I have also been acting as the technical product manager for the engineering team, as the company builds towards a product milestone to take to investors and customers. This has required me to work broadly across the business, gathering and defining requirements, scoping and organising work, and coordinate closely with our design and UX team to ensure there is a smooth pipeline of work for the development team in order to achieve a tight deadline.],
+  ),
+  tags: (
+    "Rust",
+    "DynamoDB",
+    "Smithy",
+    "AWS",
+    "Lambda",
+    "Nix",
+    "CDK",
+    "Startup",
+    "React",
+    "TypeScript",
+  ),
+)
+
+#entry-rule()
+
+#cv-entry(
   title: [Senior Software Engineer],
   society: [Seek],
-  date: [August 2022 - Present],
+  date: [August 2022 - November 2025],
   location: [Sydney, Australia],
   description: list(
-    [At Seek I work on the 'Candidate Quality' team, where I productionise AI and LLM models that help hirers find candidates that are a strong fit for their roles, and help candidates find jobs that are a good fit for them.],
-    [This work is a combination of building and maintaining low-latency data pipelines; building out scalable and cost-efficient APIs to serve models and enable product features; organising and storing data for analytics, training, and live inference; and collaborating with product managers and data scientists to bring new models and features to production.],
-    [My recent work has included reducing my team's AWS costs by 40%, and shifting a large section of our processing pipelines off of AWS Lambda onto Spark, Kafka, and DataBricks.],
-    [I have also been gradually modernising parts of my team's tech stack, including migrating from Serverless to Terraform for infrastructure management, and introducing Nix to our workflow to enable reproducible development environments.],
-    [I'm currently working on a new "High-Fit" project, using AI to highlight and explain why particular candidates are a good fit for a role, in a human-understandable way.],
+    [At Seek I worked on the 'Candidate Quality' team, where I productionised AI and LLM models that help hirers find candidates that are a strong fit for their roles, and help candidates find jobs that are a good fit for them.],
+    [This work was a combination of building and maintaining low-latency data pipelines; building out scalable and cost-efficient APIs to serve models and enable product features; organising and storing data for analytics, training, and live inference; and collaborating with product managers and data scientists to bring new models and features to production.],
+    [My work there included reducing my team's AWS costs by 40%, and shifting a large section of our processing pipelines off of AWS Lambda onto Spark, Kafka, and DataBricks.],
+    [I also gradually modernised parts of my team's tech stack, including migrating from Serverless to Terraform for infrastructure management, and introducing Nix to our workflow to enable reproducible development environments.],
+    [I also worked on a new "High-Fit" project, using AI to highlight and explain why particular candidates are a good fit for a role, in a human-understandable way.],
   ),
   tags: (
     "Python",
@@ -144,7 +179,12 @@
   ),
 )
 
-#entry-rule()
+// No rule here: Netscout is the last entry on its page.
+// #entry-rule()
+
+// Force Mediaware onto the next page so its heading stays with its body.
+// Remove if the pagination changes.
+#pagebreak()
 
 #cv-entry(
   title: [Software Engineer],

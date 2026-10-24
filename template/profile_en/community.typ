@@ -31,14 +31,14 @@
 #cv-entry(
   title: [Group Member],
   society: [Functional Programming Meetup],
-  date: [2016 - Present],
+  date: [2016 - 2022],
   location: [Canberra & Sydney, Australia],
 )
 
 #cv-entry(
   title: [Founding Member],
   society: [Lean Beer Meetup],
-  date: [2016 - Present],
+  date: [2016 - 2022],
   location: [Canberra & Sydney, Australia],
   // description: list(
   //   [A fortnightly meetup on Agile, Lean, project management, software development, & startups],

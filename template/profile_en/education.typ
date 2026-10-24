@@ -4,6 +4,13 @@
 
 #cv-section("Education")
 
+// Render each description item as an indented, justified paragraph instead of
+// a bullet point, as in the old résumé (2ex left margin ≈ 1em; Typst has no ex
+// unit). Applies to this file only. `spacing` replaces the line leading
+// (0.65em) rather than adding to it, so 1.35em gives roughly one extra 0.7em gap.
+#set list(marker: [], indent: 1em, body-indent: 0pt, spacing: 1.35em)
+#set par(justify: true)
+
 #cv-entry(
   title: [Bachelor of Computer Science (Honours) - First Class Honours],
   society: [Australian National University],

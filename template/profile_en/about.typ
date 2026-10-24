@@ -7,7 +7,7 @@
 // Plain paragraphs: the package has no dedicated "about" component, so this
 // section is ordinary Typst content under a cv-section heading.
 
-I'm a software developer with around 12 years of commercial experience. I live in the Blue Mountains west of Sydney, so I'm mainly interested in remote opportunities.
+I'm a software developer with 13 years of commercial experience. I live in the Blue Mountains west of Sydney, so I'm mainly interested in remote opportunities.
 
 My expertise is in functional programming, service-oriented cloud architectures, scalable data pipelines and data-engineering, and web development.
 
